@@ -10,5 +10,21 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = "file:./library.db"
+  url      = env("DATABASE_URL")
+}
+
+model Book {
+  id Int @id @default(autoincrement())
+  title String
+  author String
+  yearPublication Int
+  genre String
+  libraryId      Int?
+  library        Library? @relation(fields: [libraryId], references: [id]) 
+}
+
+model Library {
+  id Int @id @default(autoincrement())
+  name String
+  books Book[]
 }

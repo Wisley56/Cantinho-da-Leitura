@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node app.ts",
     "dev": "ts-node-dev --respawn src/app.ts",
-    "migrate": "prisma migrate dev"
+    "migrate": "prisma migrate dev",
+    "studio": "set PORT=8080 && npx prisma studio"
   },
   "keywords": [],
   "author": "",

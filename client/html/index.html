@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantinho da Leitura</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/client/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Cantinho da Leitura</h1>
+            <ul>
+                <li><a href="#searchCard">Pesquisar</a></li>
+                <li><a href="#booksCard">Livros</a></li>
+                <li><a href="#addBookCard">Adicionar Livro</a></li>
+                <li><a href="#suggestBookCard">Sugestões</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Pesquisar Livro -->
+        <section id="searchCard" class="card">
+            <h2>Pesquisar Livro</h2>
+            <input type="text" placeholder="Digite o nome do livro">
+            <button>Pesquisar</button>
+        </section>
+
+        <!-- Exibir Modal ao Clicar no Livro -->
+        <div id="bookModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalBookTitle">Título do Livro</h2>
+                <p id="modalBookAuthor">Autor: </p>
+                <p id="modalBookYear">Ano: </p>
+                <p id="modalBookGenre">Gênero: </p>
+                <p id="modalBookDescription">Descrição breve do livro...</p>
+                <button id="addToLibraryButton">Adicionar à Biblioteca</button>
+            </div>
+        </div>
+
+        <section id="booksCard" class="card">
+            <h2>Todos os Livros</h2>
+            <!-- Atualização no carrossel -->
+            <div class="carousel">
+                <div class="carousel-item">
+                    Livro A
+                    <span class="info-icon" title="Mais detalhes">&#9432;</span>
+                </div>
+                <div class="carousel-item">
+                    Livro B
+                    <span class="info-icon" title="Mais detalhes">&#9432;</span>
+                </div>
+                <div class="carousel-item">
+                    Livro C
+                    <span class="info-icon" title="Mais detalhes">&#9432;</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Exibir Livros da Library-->
+        <section id="booksCard" class="card">
+            <h2>Livros da Biblioteca</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    Livro A
+                    <span class="info-icon" title="Mais detalhes">&#9432;</span>
+                </div>
+                <div class="carousel-item">
+                    Livro B
+                    <span class="info-icon" title="Mais detalhes">&#9432;</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Adicionar Livro -->
+        <section id="addBookCard" class="card">
+            <h2>Cadastrar novo Livro</h2>
+            <input type="text" placeholder="Título">
+            <input type="text" placeholder="Autor">
+            <input type="number" placeholder="Ano de Publicação">
+            <input type="text" placeholder="Gênero">
+            <button>Cadastrar Livro</button>
+        </section>
+
+        <!-- Sugerir Livro -->
+        <section id="suggestBookCard" class="card">
+            <h2>Sugerir Livro</h2>
+            <input type="text" placeholder="Título">
+            <input type="text" placeholder="Autor">
+            <button>Sugerir</button>
+        </section>
+    </main>
+
+    <div id="toast-container"></div>
+
+    <script src="/client/js/script.js"></script>
+</body>
+</html>
